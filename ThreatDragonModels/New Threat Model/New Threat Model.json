@@ -80,8 +80,8 @@
           },
           {
             "position": {
-              "x": 270.99999999999994,
-              "y": -10.999999999999936
+              "x": 270,
+              "y": -30
             },
             "size": {
               "width": 130,
@@ -92,8 +92,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -108,14 +108,41 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
+              "threats": [
+                {
+                  "id": "75bc278a-0f99-4528-a9f6-4f9477891428",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Server wird einem DDOS ausgesetzt und ist dadurch nicht erreichbar.\n-> Bot Netzwerk\n\nCAPEC 488 HTTP Flood",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 101,
+                  "score": ""
+                },
+                {
+                  "id": "819da770-4081-4da8-b258-94faa776739e",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "\n\nCAPEC 151",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": true,
+                  "number": 0,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true
             }
           },
           {
             "position": {
-              "x": 488,
-              "y": -11.999999999999922
+              "x": 500,
+              "y": -7
             },
             "size": {
               "width": 130,
@@ -126,8 +153,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -142,8 +169,35 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "eb0efcba-3d7c-4724-9455-44304ee81423",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Schlechter ausgelegter Service als Login System\n-> DDOS vom Login System, aber diese haelt den DDOS Angriff stand\n\nCAPEC 488 HTTP Flood",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 113,
+                  "score": ""
+                },
+                {
+                  "id": "62a202d4-7f35-4adf-957c-6be67c148df6",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Aendern des erwarteten OTT\n-> Verbindung ist ueber HTTP mit einem offenen WLAN und man gaukelt dieses vor ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 116,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -459,7 +513,16 @@
             "target": {
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 460,
+                "y": 90
+              },
+              {
+                "x": 440,
+                "y": 65
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1582,7 +1645,7 @@
           },
           {
             "position": {
-              "x": 320,
+              "x": 350,
               "y": -140
             },
             "size": {
@@ -1594,11 +1657,13 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1608,7 +1673,7 @@
             "id": "c2716661-ef88-48a8-8d0f-724e1923d562",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Log-DB",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1616,8 +1681,48 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": true,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0e761a28-a1bc-45a9-a33f-c36669a413a6",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Admin Account mit Default Passwort\n-> jeder im Netzwerk kann die Daten einsehen, wenn er die Datenbank kennt\nCAPEC: 70\nATTACK: Brute Force: Password Guessing",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 103,
+                  "score": ""
+                },
+                {
+                  "id": "097c6a99-b15e-4576-ae40-12ebf39a955f",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Server steht  im Buero, jeder hat Zugriff ohne Login\n-> sich an den Server setzen und Daten bearbeiten\n\nCAPEC 122 Privilege Abuse",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 118,
+                  "score": ""
+                },
+                {
+                  "id": "12ec1044-5e5c-477f-b385-8021a2500f42",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "System loggt keine Telefonnummern\n-> Fehler im Code",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 120,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isPublicNetwork": false
@@ -1720,8 +1825,8 @@
                 "text": "SIEM"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1729,14 +1834,41 @@
             "shape": "process",
             "id": "18b2e5f9-17a8-4d78-8d1e-0a1225660a05",
             "data": {
-              "name": "Data Flow",
+              "name": "SIEM",
               "description": "",
               "type": "tm.Flow",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "c5b576b7-1f75-4194-851f-d17de53b845a",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Angreifer hat Zugriff aufs SIEM und kann sich die DB Config anschauen und somit sich mit der SIEM DB verbinden.\n-> Angreifer durchsucht das SIEM und findet DB Config\n\nCAPEC-233: Privilege Escalation\nATTACK Abuse Elevation Control Mechanism ",
+                  "mitigation": "Um Config sich anzuschauen braucht man Admin Rechte",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 107,
+                  "score": ""
+                },
+                {
+                  "id": "46926749-c970-47e1-9646-dc58f253f97d",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Loggt gar nicht, da \n-> falsch konfigurierte Verbindung",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 121,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1758,11 +1890,13 @@
                 "text": "SIEM Logs"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1780,14 +1914,28 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "e630f317-6092-4d25-84c8-168838e54560",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Angreifer hat Zugriff auf DB und kann Logs veraendern.\n-> Phishing des Admins\nCAPEC \nATTACK ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 105,
+                  "score": ""
+                }
+              ]
             }
           },
           {
             "position": {
-              "x": 1140,
-              "y": 330
+              "x": 1130,
+              "y": 340
             },
             "size": {
               "width": 120,
@@ -1798,8 +1946,8 @@
                 "text": "Report \nMailing\nService"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1814,8 +1962,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "fd9a08c3-dba7-4495-8256-988786223c99",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Mail geht an alle Mitarbeiter\n-> falsche Konfiguration",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 117,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1870,8 +2032,8 @@
                 "text": "Export\nProzess"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1886,8 +2048,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "721ac4e4-3d64-440a-ac9c-3ecad9a5332f",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Angreifer hat Zugriff auf das Export Skript und kann den Report Output veraendern\n-> Mitarbeiter moechte seinen Angriff auf die Firma verheimlichen und aendert das Programm\nCAPEC 122 Privilege Abuse\nATTACK: \n-> ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 106,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1905,7 +2081,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 100
+    "threatTop": 122
   },
   "version": "2.1.1"
 }
