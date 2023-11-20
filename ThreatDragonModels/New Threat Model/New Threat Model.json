@@ -1675,12 +1675,25 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Admin Account mit Default Passwort\n-> jeder im Netzwerk kann die Daten einsehen\nCAPEC: \nTry Common or Default Usernames and Passwords\nhttps://capec.mitre.org/data/definitions/70.html\nATTACK: \nBrute Force: Password Guessing\nhttp://attack.mitre.org/techniques/T1110/001/",
+                  "description": "Man kann alle Daten in der DB sich angucken, da der Admin Account mit Default Passwort geschuetzt ist\n-> jeder im Netzwerk kann sich einfach einloggen\nCAPEC: \nTry Common or Default Usernames and Passwords\nhttps://capec.mitre.org/data/definitions/70.html\nATTACK: \nValid Accounts: Default Accounts \nhttps://attack.mitre.org/techniques/T1078/001/",
                   "mitigation": "Strong Password Policy\nD3-SPP\nkeine default Passwoerter erlaubt",
                   "modelType": "Generic",
                   "new": false,
                   "number": 103,
                   "score": "50"
+                },
+                {
+                  "id": "08734fb1-c6c4-462b-ac5c-0493abc60da2",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Man kann alle Daten in der DB veraendern, da der Admin Account mit Default Passwort geschuetzt ist\n-> jeder im Netzwerk kann sich einfach einloggen\nCAPEC: \nTry Common or Default Usernames and Passwords\nhttps://capec.mitre.org/data/definitions/70.html\nATTACK: \nValid Accounts: Default Accounts \nhttps://attack.mitre.org/techniques/T1078/001/",
+                  "mitigation": "Strong Password Policy\nD3-SPP\nkeine default Passwoerter erlaubt",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 126,
+                  "score": ""
                 }
               ],
               "isBidirectional": false,
@@ -1984,7 +1997,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 125
+    "threatTop": 127
   },
   "version": "2.1.1"
 }
